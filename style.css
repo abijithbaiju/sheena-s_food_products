@@ -1,0 +1,239 @@
+/* Sheenas Food Product — Ammachede Achar | Shared stylesheet */
+
+:root {
+  --terracotta: #8B2613; --terracotta-light: #A3321C; --terracotta-dark: #6A1B0C;
+  --gold: #D4AF37; --gold-hover: #B89528;
+  --parchment: #FDFBF7; --parchment-dark: #F4EFE6;
+  --charcoal: #2C2523; --warm-gray: #665C58;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F4EFE6; }
+::-webkit-scrollbar-thumb { background: #8B2613; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6A1B0C; }
+
+.hero-bg {
+  background: linear-gradient(rgba(44,37,35,.75), rgba(44,37,35,.85)),
+              url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.hero-bg-products {
+  background: linear-gradient(rgba(44,37,35,.78), rgba(44,37,35,.88)),
+              url('WhatsApp Image 2026-10-19 at 8.47.40 AM.jpeg');
+  background-size: cover; background-position: center;
+}
+.hero-bg-about {
+  background: linear-gradient(rgba(44,37,35,.78), rgba(44,37,35,.88)),
+              url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.hero-bg-contact {
+  background: linear-gradient(rgba(44,37,35,.78), rgba(44,37,35,.88)),
+              url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.wood-pattern {
+  background-color: #2C2523;
+  background-image: radial-gradient(#3a322f 1px, transparent 0);
+  background-size: 16px 16px;
+}
+.nav-active { color: var(--terracotta); font-weight: 700; }
+
+/* ---------- UI polish ---------- */
+html { scroll-padding-top: 6rem; }
+body { -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; }
+
+/* Keyboard focus that is visible on the parchment and dark sections */
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+.wood-pattern :focus-visible, .hero-bg :focus-visible, .hero-bg-products :focus-visible,
+.hero-bg-about :focus-visible, .hero-bg-contact :focus-visible { outline-color: var(--gold); }
+
+/* Buttons respond to touch and click */
+button, a.btn-like { transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease; }
+button:active { transform: scale(.97); }
+button:disabled { cursor: not-allowed; }
+
+/* Hero entrance */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.hero-bg .max-w-5xl > *, .hero-bg-products .max-w-4xl > *,
+.hero-bg-about .max-w-4xl > *, .hero-bg-contact .max-w-4xl > * {
+  animation: fadeUp .7s ease both;
+}
+.hero-bg .max-w-5xl > *:nth-child(2) { animation-delay: .08s; }
+.hero-bg .max-w-5xl > *:nth-child(3) { animation-delay: .16s; }
+.hero-bg .max-w-5xl > *:nth-child(4) { animation-delay: .24s; }
+
+/* Product and feature cards */
+.product-card { will-change: transform; }
+
+/* Form controls */
+select, input, textarea { font-family: inherit; }
+select { appearance: auto; }
+input:focus, textarea:focus, select:focus { outline: none; }
+
+/* Cart drawer and modal scroll nicely */
+#cartItemsContainer { overscroll-behavior: contain; }
+#modalContent { overscroll-behavior: contain; }
+
+/* Gold accent line used under headings */
+.nav-active { position: relative; }
+.nav-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); border-radius: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+
+/* Additional finishing touches */
+:root { color-scheme: light; }
+::selection { background: #D4AF37; color: #2C2523; }
+a { text-underline-offset: 3px; }
+a:not([class]) { color: var(--terracotta); }
+nav a, footer a { text-decoration: none; }
+button, input, select, textarea { min-height: 2.75rem; }
+input[type="checkbox"], input[type="radio"] { min-height: auto; }
+img { height: auto; }
+.product-card, #productGrid > div, #featuredGrid > div { border-radius: 1rem; }
+#productGrid img, #featuredGrid img { background: #F4EFE6; }
+#productGrid > div:hover, #featuredGrid > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(44,37,35,.12);
+}
+#cartDrawer { max-width: 100vw; }
+#cartOverlay { cursor: pointer; }
+section[id], div[id] { scroll-margin-top: 6.5rem; }
+@media (max-width: 640px) {
+  .hero-bg, .hero-bg-products, .hero-bg-about, .hero-bg-contact { background-position: center; }
+  h1 { text-wrap: balance; }
+}
+
+/* ===== Premium visual refresh: warm, editorial, food-first ===== */
+:root {
+  --terracotta: #8f2d1d;
+  --terracotta-light: #a6402b;
+  --terracotta-dark: #642016;
+  --gold: #d8b65a;
+  --gold-hover: #c49c38;
+  --parchment: #fffaf2;
+  --parchment-dark: #f5ecdf;
+  --charcoal: #29211e;
+  --warm-gray: #71625b;
+  --surface: #fffdf9;
+  --soft-border: rgba(100, 32, 22, .12);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--parchment); color: var(--charcoal); line-height: 1.65; }
+::selection { background: var(--gold); color: var(--charcoal); }
+
+/* Slim announcement bar and elevated sticky navigation */
+body > div:first-child { letter-spacing: .015em; }
+nav.sticky {
+  background: rgba(255, 250, 242, .92) !important;
+  border-bottom: 1px solid rgba(100, 32, 22, .1) !important;
+  box-shadow: 0 8px 28px rgba(48, 29, 20, .055) !important;
+  backdrop-filter: blur(18px);
+}
+nav.sticky > div:first-child > div { min-height: 78px; }
+nav a, nav button { transition: color .2s ease, background-color .2s ease, transform .2s ease; }
+nav .font-serif.text-xl, nav .font-serif.text-2xl { letter-spacing: -.035em; }
+nav .nav-link { position: relative; }
+nav .nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 2px; height: 2px; background: var(--gold); transition: right .22s ease; }
+nav .nav-link:hover::after, nav .nav-link.nav-active::after { right: 0; }
+#cartBtn { box-shadow: 0 7px 16px rgba(100, 32, 22, .18); }
+#cartBtn:hover { transform: translateY(-2px); }
+#mobileMenu { box-shadow: 0 18px 28px rgba(41, 33, 30, .08); }
+
+/* More cinematic hero sections with readable content */
+.hero-bg, .hero-bg-products, .hero-bg-about, .hero-bg-contact {
+  isolation: isolate;
+  background-color: #39231c;
+  background-attachment: scroll;
+  background-position: center 48%;
+}
+.hero-bg { min-height: min(760px, 82vh); }
+.hero-bg::before, .hero-bg-products::before, .hero-bg-about::before, .hero-bg-contact::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(100deg, rgba(25, 17, 14, .78) 0%, rgba(36, 21, 16, .58) 55%, rgba(36, 21, 16, .34) 100%);
+}
+.hero-bg .max-w-5xl, .hero-bg-products > div, .hero-bg-about > div, .hero-bg-contact > div { max-width: 900px; }
+.hero-bg h1, .hero-bg-products h1, .hero-bg-about h1, .hero-bg-contact h1 {
+  letter-spacing: -.045em; line-height: 1.08; text-wrap: balance;
+  text-shadow: 0 5px 28px rgba(0,0,0,.22);
+}
+.hero-bg p, .hero-bg-products p, .hero-bg-about p, .hero-bg-contact p { text-wrap: pretty; }
+.hero-bg .inline-flex, .hero-bg-products .inline-flex, .hero-bg-about .inline-flex, .hero-bg-contact .inline-flex { box-shadow: 0 8px 28px rgba(0,0,0,.12); }
+.hero-bg a, .hero-bg-products a, .hero-bg-about a, .hero-bg-contact a { box-shadow: 0 10px 24px rgba(0,0,0,.16); }
+
+/* Buttons feel tactile, with consistent corners and motion */
+a[class*="bg-terracotta"], a[class*="bg-gold"], button[class*="bg-terracotta"], button[class*="bg-gold"] {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+a[class*="bg-terracotta"]:hover, a[class*="bg-gold"]:hover,
+button[class*="bg-terracotta"]:hover, button[class*="bg-gold"]:hover {
+  transform: translateY(-2px); box-shadow: 0 12px 24px rgba(55, 28, 18, .16);
+}
+a[class*="rounded-xl"], button[class*="rounded-xl"] { border-radius: 14px; }
+
+/* Section rhythm and premium card surfaces */
+section:not(.hero-bg):not(.hero-bg-products):not(.hero-bg-about):not(.hero-bg-contact) { scroll-margin-top: 92px; }
+section h2 { letter-spacing: -.035em; text-wrap: balance; }
+section p { text-wrap: pretty; }
+#featuredGrid > div, #productGrid > div, .product-card {
+  overflow: hidden; border: 1px solid rgba(100, 32, 22, .10) !important;
+  border-radius: 20px !important; background: var(--surface);
+  box-shadow: 0 5px 20px rgba(57, 36, 26, .045);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+#featuredGrid > div:hover, #productGrid > div:hover, .product-card:hover {
+  transform: translateY(-6px); border-color: rgba(143, 45, 29, .25) !important;
+  box-shadow: 0 20px 42px rgba(57, 36, 26, .12);
+}
+#featuredGrid img, #productGrid img { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+#featuredGrid > div:hover img, #productGrid > div:hover img { transform: scale(1.045); }
+#featuredGrid img, #productGrid img { object-fit: cover; }
+
+/* Pricing and story panels */
+.bg-white.rounded-2xl, .bg-white.rounded-xl {
+  box-shadow: 0 8px 26px rgba(57, 36, 26, .045);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.bg-white.rounded-2xl:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(57, 36, 26, .08); }
+.wood-pattern {
+  background-color: #30211b;
+  background-image: radial-gradient(rgba(216,182,90,.11) .7px, transparent .7px), linear-gradient(135deg, rgba(143,45,29,.15), transparent 55%);
+  background-size: 17px 17px, cover;
+}
+
+/* Forms, filters, and cart surfaces */
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  border: 1px solid rgba(100, 32, 22, .2); border-radius: 12px;
+  background: #fffdf9; padding: .75rem .9rem; color: var(--charcoal);
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+input:not([type="checkbox"]):not([type="radio"]):focus, select:focus, textarea:focus {
+  border-color: var(--terracotta-light); box-shadow: 0 0 0 4px rgba(143,45,29,.09); background: #fff;
+}
+#cartDrawer { box-shadow: -20px 0 60px rgba(30, 20, 15, .2); }
+#cartOverlay { backdrop-filter: blur(3px); }
+
+/* Footer: clean hierarchy and comfortable links */
+footer { border-top-width: 3px !important; }
+footer a { transition: color .18s ease, opacity .18s ease; }
+footer a:hover { color: var(--gold) !important; }
+
+/* Better touch targets and small-screen spacing */
+@media (max-width: 767px) {
+  nav.sticky > div:first-child > div { min-height: 68px; }
+  nav .font-serif.text-xl, nav .font-serif.text-2xl { font-size: 1.05rem; letter-spacing: -.04em; }
+  nav .text-xs.tracking-widest { font-size: .58rem; letter-spacing: .09em; }
+  .hero-bg { min-height: 680px; padding-top: 4.5rem; padding-bottom: 4rem; }
+  .hero-bg h1, .hero-bg-products h1, .hero-bg-about h1, .hero-bg-contact h1 { font-size: clamp(2.35rem, 10vw, 3.7rem); }
+  .hero-bg .grid { gap: .9rem; }
+  section.py-16, section.py-20, section.py-24 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  #featuredGrid, #productGrid { gap: 1rem; }
+  #featuredGrid > div:hover, #productGrid > div:hover, .product-card:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

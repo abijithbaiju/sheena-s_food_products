@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8C%B6%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<title>Sheenas Food Product | Ammachede Achar — Homemade Pickles</title>
+<meta name="description" content="Sheenas Food Product — Ammachede Achar. Traditional homemade veg & non-veg pickles, small-batch crafted, all-India delivery.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { terracotta:'#8B2613', terracottaLight:'#A3321C', terracottaDark:'#6A1B0C', gold:'#D4AF37', goldHover:'#B89528', parchment:'#FDFBF7', parchmentDark:'#F4EFE6', charcoal:'#2C2523', warmGray:'#665C58' },
+  fontFamily: { serif:['Cinzel','serif'], sans:['Plus Jakarta Sans','sans-serif'] }
+} } }
+</script>
+</head>
+<body class="bg-parchment text-charcoal font-sans antialiased selection:bg-gold selection:text-charcoal">
+
+<div class="bg-terracottaDark text-gold text-xs md:text-sm font-medium py-2 px-4 text-center border-b border-gold/20 flex justify-between items-center px-4 md:px-12">
+  <span class="hidden md:inline"><i class="fa-solid fa-truck-fast mr-2"></i> All-India Delivery — Shipping Charges Apply</span>
+  <span class="mx-auto md:mx-0">🌶️ New Customer? 15% off first 3-jar combo!</span>
+  <span class="hidden md:inline"><i class="fa-solid fa-shield-halved mr-2"></i> Homemade in small batches</span>
+</div>
+
+<nav class="sticky top-0 z-40 bg-parchment/95 backdrop-blur-md border-b border-terracotta/10 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 rounded-full bg-terracotta text-gold flex items-center justify-center font-serif text-xl font-bold shadow-md group-hover:scale-105 transition-transform"><i class="fa-solid fa-jar"></i></div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold text-terracotta tracking-wider block leading-none">SHEENAS FOOD</span>
+          <span class="text-xs font-semibold tracking-widest text-gold uppercase block mt-1">PRODUCT • AMMACHEDE ACHAR</span>
+        </div>
+      </a>
+      <div class="hidden md:flex space-x-8 text-sm font-semibold text-charcoal">
+        <a href="index.html" class="nav-link hover:text-terracotta transition-colors py-2">Home</a>
+        <a href="products.html" class="nav-link hover:text-terracotta transition-colors py-2">Our Pickles</a>
+        <a href="products.html#combo-builder" class="hover:text-terracotta transition-colors py-2 text-terracotta flex items-center"><i class="fa-solid fa-cubes-stacked mr-1.5 text-gold"></i> New User Combo</a>
+        <a href="about.html" class="nav-link hover:text-terracotta transition-colors py-2">Our Craft</a>
+        <a href="contact.html" class="nav-link hover:text-terracotta transition-colors py-2">Contact</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="products.html" class="p-2 text-charcoal hover:text-terracotta transition-colors" title="Search Flavors" aria-label="Search flavors"><i class="fa-solid fa-magnifying-glass text-lg"></i></a>
+        <button id="cartBtn" aria-label="Open cart" class="relative p-2.5 bg-terracotta text-parchment rounded-xl hover:bg-terracottaDark transition-all shadow-md hover:shadow-lg flex items-center space-x-2">
+          <i class="fa-solid fa-basket-shopping text-lg"></i>
+          <span class="hidden sm:inline font-semibold text-xs uppercase tracking-wider">Cart</span>
+          <span id="cartCountBadge" class="absolute -top-2 -right-2 bg-gold text-charcoal font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center border-2 border-parchment shadow-sm">0</span>
+        </button>
+        <button id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden p-2 rounded-lg text-charcoal hover:bg-parchmentDark"><i class="fa-solid fa-bars text-xl"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-parchmentDark border-b border-terracotta/10 px-4 pt-2 pb-6 space-y-3">
+    <a href="index.html" class="block py-2 font-medium text-charcoal hover:text-terracotta">Home</a>
+    <a href="products.html" class="block py-2 font-medium text-charcoal hover:text-terracotta">Our Pickles</a>
+    <a href="products.html#combo-builder" class="block py-2 font-medium text-terracotta font-semibold"><i class="fa-solid fa-cubes-stacked mr-2 text-gold"></i>New User Combo</a>
+    <a href="about.html" class="block py-2 font-medium text-charcoal hover:text-terracotta">Our Craft</a>
+    <a href="contact.html" class="block py-2 font-medium text-charcoal hover:text-terracotta">Contact</a>
+  </div>
+</nav>
+
+<section class="hero-bg relative text-parchment min-h-[85vh] flex items-center justify-center px-4 py-20">
+  <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+    <div class="inline-flex items-center space-x-2 bg-gold/20 backdrop-blur-md border border-gold/40 text-gold px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider">
+      <i class="fa-solid fa-fire-flame-curved text-amber-400"></i><span>Handcrafted in Small Batches</span>
+    </div>
+    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-md">
+      Ammachede Achar <br><span class="text-gold italic font-normal">Traditional & Flavorful</span>
+    </h1>
+    <p class="max-w-2xl mx-auto text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+      Sheenas Food Product brings you authentic homemade pickles — veg & non-veg — crafted with cold-pressed oil, sun-cured spices and zero artificial preservatives. All-India delivery.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+      <a href="products.html" class="w-full sm:w-auto px-8 py-4 bg-terracotta hover:bg-terracottaDark text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 border border-terracottaLight">
+        <span>Explore Pickle Menu</span><i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+      <a href="products.html#combo-builder" class="w-full sm:w-auto px-8 py-4 bg-gold/90 hover:bg-gold text-charcoal font-bold rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-gift"></i><span>New User Combo — 15% Off</span>
+      </a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-white/10 text-xs sm:text-sm text-gray-300">
+      <div class="flex items-center justify-center space-x-2"><i class="fa-solid fa-leaf text-green-400 text-lg"></i><span>100% Natural</span></div>
+      <div class="flex items-center justify-center space-x-2"><i class="fa-solid fa-house-chimney text-gold text-lg"></i><span>Home Prepared</span></div>
+      <div class="flex items-center justify-center space-x-2"><i class="fa-solid fa-ban text-red-400 text-lg"></i><span>No Preservatives</span></div>
+      <div class="flex items-center justify-center space-x-2"><i class="fa-solid fa-award text-amber-300 text-lg"></i><span>Made in small batches</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+  <div class="text-center max-w-3xl mx-auto mb-10">
+    <span class="text-terracotta font-bold text-sm tracking-widest uppercase block mb-2">Simple, Honest Pricing</span>
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Priced Per Kilogram</h2>
+    <div class="w-24 h-1 bg-gold mx-auto my-4 rounded-full"></div>
+    <p class="text-warmGray text-sm sm:text-base">Choose any jar size — 100g, 250g, 500g or 1kg. <span class="italic">Prices may vary depending on season.</span></p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+    <div class="bg-white rounded-2xl border border-green-200 shadow-sm p-8 text-center">
+      <div class="text-4xl mb-2">🥦</div>
+      <h3 class="font-serif text-2xl font-bold text-charcoal">Veg Pickles</h3>
+      <div class="text-4xl font-bold text-green-700 mt-3">₹400 <span class="text-sm font-normal text-gray-500">/ kg</span></div>
+      <p class="text-xs text-gray-500 mt-2">Mango • Lemon • Garlic • Kanthari</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-red-200 shadow-sm p-8 text-center">
+      <div class="text-4xl mb-2">🍗</div>
+      <h3 class="font-serif text-2xl font-bold text-charcoal">Non-Veg Pickles</h3>
+      <div class="text-4xl font-bold text-terracotta mt-3">₹1500 <span class="text-sm font-normal text-gray-500">/ kg</span></div>
+      <p class="text-xs text-gray-500 mt-2">Chicken • Beef • Fish • Prawn</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-parchmentDark py-16 sm:py-20 border-y border-terracotta/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-terracotta font-bold text-sm tracking-widest uppercase block mb-2">Taste The Tradition</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Our Signature Jars</h2>
+      <div class="w-24 h-1 bg-gold mx-auto my-4 rounded-full"></div>
+    </div>
+    <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"></div>
+    <div class="text-center mt-10">
+      <a href="products.html" class="inline-flex items-center space-x-2 px-8 py-3 bg-terracotta hover:bg-terracottaDark text-white font-semibold rounded-xl shadow-md transition-colors">
+        <span>View All Pickles</span><i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="wood-pattern text-parchment py-16 sm:py-20 border-y border-gold/20">
+  <div class="max-w-4xl mx-auto px-4 text-center space-y-5">
+    <div class="inline-flex items-center space-x-2 bg-gold/20 text-gold px-3 py-1 rounded-md text-xs font-bold tracking-widest uppercase border border-gold/30">
+      <i class="fa-solid fa-tags"></i><span>New Customer Offer</span>
+    </div>
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold">Build Your First <span class="text-gold">3-Jar Box — 15% Off</span></h2>
+    <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">A one-time welcome offer for first-time customers. Pick any 3 jars of 250g each — all veg or all non-veg. Use code <strong class="text-gold">NEWBOX15</strong>.</p>
+    <a href="products.html#combo-builder" class="inline-flex items-center space-x-2 px-8 py-4 bg-gold hover:bg-goldHover text-charcoal font-bold rounded-xl shadow-lg transition-all">
+      <i class="fa-solid fa-gift"></i><span>Build My Combo Box</span>
+    </a>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="relative">
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+        <img src="Gemini_Generated_Image_y3dgcjy3dgcjy3dg.png" class="w-full h-[420px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <p class="font-serif italic text-lg text-gold">"Every spice is roasted by hand, every jar packed with love."</p>
+          <p class="text-xs text-gray-300 mt-1">— Ammachede Achar Heritage</p>
+        </div>
+      </div>
+      <div class="absolute -bottom-6 -right-6 bg-terracotta text-gold p-5 rounded-2xl shadow-xl hidden sm:block border border-gold/30 text-center">
+        <span class="block text-2xl font-serif font-bold">100%</span>
+        <span class="text-xs uppercase font-semibold tracking-wider text-white">Home Made</span>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <span class="text-terracotta font-bold text-sm tracking-widest uppercase">Purity in Every Jar</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal leading-tight">Crafted with Sun-Cured Spices & Zero Preservatives</h2>
+      <p class="text-warmGray text-sm sm:text-base leading-relaxed">At <strong>Sheenas Food Product</strong>, pickle-making is an art passed down through generations. We skip industrial production, chemical enhancers and synthetic colours.</p>
+      <p class="text-warmGray text-sm sm:text-base leading-relaxed">Our non-veg pickles use fresh premium cuts, marinated overnight and cooked in sesame & mustard oil. Our veg pickles use farm-fresh seasonal produce and freshly ground whole spices.</p>
+      <div class="grid grid-cols-2 gap-4 pt-4">
+        <div class="p-4 bg-parchmentDark rounded-xl border border-terracotta/10">
+          <i class="fa-solid fa-jar-wheat text-terracotta text-2xl mb-2"></i>
+          <h4 class="font-bold text-sm text-charcoal">Hygienic Glass Jars</h4>
+          <p class="text-xs text-warmGray mt-1">Airtight sealed to preserve aroma and shelf life.</p>
+        </div>
+        <div class="p-4 bg-parchmentDark rounded-xl border border-terracotta/10">
+          <i class="fa-solid fa-mortar-pestle text-terracotta text-2xl mb-2"></i>
+          <h4 class="font-bold text-sm text-charcoal">Small Batch Cooking</h4>
+          <p class="text-xs text-warmGray mt-1">Prepared weekly for maximum freshness.</p>
+        </div>
+      </div>
+      <a href="about.html" class="inline-flex items-center text-terracotta font-semibold text-sm hover:underline">Read Our Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-parchmentDark py-16 sm:py-24 border-t border-terracotta/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-terracotta font-bold text-sm tracking-widest uppercase">Verified Pickle Lovers</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">What Our Customers Say</h2>
+      <div class="w-16 h-1 bg-gold mx-auto my-3 rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-gray-600 text-sm italic">"The Signature Chicken Pickle reminded me exactly of my grandmother's cooking! Generous juicy meat pieces and balanced spice."</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center text-sm">RP</div>
+          <div><h4 class="font-bold text-sm text-charcoal">Rajesh P.</h4><span class="text-xs text-gray-400">Verified Buyer • Bengaluru</span></div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-gray-600 text-sm italic">"Finding authentic preservative-free Raw Mango Pickle online is hard. Sheenas got the tangy garlic balance spot on!"</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center text-sm">AM</div>
+          <div><h4 class="font-bold text-sm text-charcoal">Ananya M.</h4><span class="text-xs text-gray-400">Verified Buyer • Mumbai</span></div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-gray-600 text-sm italic">"The Prawn Pickle is an absolute masterpiece! Spiced just right without overpowering the natural prawn flavor."</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center text-sm">SK</div>
+          <div><h4 class="font-bold text-sm text-charcoal">Sunil K.</h4><span class="text-xs text-gray-400">Verified Buyer • Hyderabad</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-parchment pt-16 pb-12 border-t-4 border-gold">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-terracotta text-gold flex items-center justify-center font-serif text-lg font-bold"><i class="fa-solid fa-jar"></i></div>
+          <span class="font-serif text-xl font-bold text-gold tracking-wider">SHEENAS FOOD</span>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed">Ammachede Achar — handcrafted home-cooked pickles celebrating authentic heritage recipes. Packed in hygienic glass jars. All-India delivery available.</p>
+        <div class="text-xs text-amber-300 font-semibold pt-1"><i class="fa-solid fa-certificate text-gold mr-1"></i> Homemade with care in small batches</div>
+      </div>
+      <div>
+        <h4 class="font-serif text-gold font-bold text-base mb-4">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs text-gray-300">
+          <li><a href="products.html" class="hover:text-gold transition-colors">All Pickles</a></li>
+          <li><a href="products.html#combo-builder" class="hover:text-gold transition-colors">New User Combo</a></li>
+          <li><a href="about.html" class="hover:text-gold transition-colors">Our Recipe Heritage</a></li>
+          <li><a href="contact.html" class="hover:text-gold transition-colors">Contact & Shipping</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-serif text-gold font-bold text-base mb-4">Customer Support</h4>
+        <ul class="space-y-2.5 text-xs text-gray-300">
+          <li class="flex items-start space-x-2"><i class="fa-solid fa-location-dot text-terracotta mt-0.5"></i><span>Chittarikkal, Kerala</span></li>
+          <li class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-green-400"></i><span>+91 73063 19095</span></li>
+          <li class="flex items-center space-x-2"><i class="fa-solid fa-envelope text-gold"></i><span>Contact us on WhatsApp for orders</span></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h4 class="font-serif text-gold font-bold text-base">Seasonal Offers</h4>
+        <p class="text-xs text-gray-400">For seasonal batches and offers, message us on WhatsApp.</p>
+        <div class="space-y-2">
+          
+          <a href="https://wa.me/917306319095?text=Hello%20Sheenas%20Food%20Product%2C%20please%20share%20your%20seasonal%20offers." target="_blank" rel="noopener noreferrer" class="w-full py-2 bg-terracotta hover:bg-terracottaDark text-white text-xs font-bold rounded-lg transition-colors text-center block">Message on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+      <p>© 2026 Sheenas Food Product. All rights reserved.</p>
+      <div class="flex space-x-6 text-base">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/917306319095" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-root"></div>
+<script src="app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const featured = picklesData.slice(0, 4);
+    const grid = document.getElementById('featuredGrid');
+    grid.innerHTML = featured.map(item => {
+      const chillies = '🌶️'.repeat(item.spiceLevel);
+      return `
+      <div class="bg-white rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+        <div class="relative overflow-hidden bg-gray-100">
+          <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm backdrop-blur-md ${item.category==='veg'?'bg-green-700/90':'bg-red-800/90'} text-white">${item.category==='veg'?'🥦 Veg':'🍗 Non-Veg'}</span>
+          <span class="absolute top-3 right-3 text-xs bg-black/60 backdrop-blur-md text-white px-2 py-0.5 rounded-md">${chillies}</span>
+        </div>
+        <div class="p-5 space-y-3">
+          
+          <h3 class="font-serif font-bold text-base text-charcoal leading-snug">${item.name}</h3>
+          <p class="text-xs text-warmGray line-clamp-2">${item.description}</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+            <div><span class="text-xs text-gray-400">From:</span><span class="text-lg font-bold text-terracotta ml-1">₹${priceFor(item.category,100)}</span><span class="text-[10px] text-gray-400 block">₹${PRICE_PER_KG[item.category]} / kg</span></div>
+            <a href="products.html" class="px-3 py-2 bg-terracotta hover:bg-terracottaDark text-white text-xs font-bold rounded-lg">Order</a>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  });
+</script>
+</body>
+</html>
